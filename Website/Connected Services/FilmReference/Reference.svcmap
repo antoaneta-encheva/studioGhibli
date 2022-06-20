@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="ef67ed5e-6a39-405c-93c7-ac31d0eecb2e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:52423/Film.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Film.wsdl" MetadataType="Wsdl" ID="22d0d9b2-1af1-4b17-949b-04fdfc09e642" SourceId="1" SourceUrl="http://localhost:52423/Film.svc?wsdl" />
+    <MetadataFile FileName="Film.xsd" MetadataType="Schema" ID="db374d2f-51e2-4e96-b04e-fbeecce9a927" SourceId="1" SourceUrl="http://localhost:52423/Film.svc?xsd=xsd1" />
+    <MetadataFile FileName="Film1.xsd" MetadataType="Schema" ID="f1da1891-61d0-4452-9eb3-87b6206b9424" SourceId="1" SourceUrl="http://localhost:52423/Film.svc?xsd=xsd2" />
+    <MetadataFile FileName="Film2.xsd" MetadataType="Schema" ID="99ff2435-2bef-4730-ac26-d7cb395dfb9c" SourceId="1" SourceUrl="http://localhost:52423/Film.svc?xsd=xsd0" />
+    <MetadataFile FileName="Film.disco" MetadataType="Disco" ID="a205f132-d9ea-4406-bdd7-236bb1f99fdd" SourceId="1" SourceUrl="http://localhost:52423/Film.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Film" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:52423/Film.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:52423/Film.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:52423/Film.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ApplicationService.DTOs" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFilm_GetFilms_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilms" />
+  </wsdl:message>
+  <wsdl:message name="IFilm_GetFilms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFilm_GetFilmByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmByID" />
+  </wsdl:message>
+  <wsdl:message name="IFilm_GetFilmByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilmByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFilm_PostFilm_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostFilm" />
+  </wsdl:message>
+  <wsdl:message name="IFilm_PostFilm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostFilmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFilm_PutFilm_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutFilm" />
+  </wsdl:message>
+  <wsdl:message name="IFilm_PutFilm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutFilmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFilm_DeleteFilm_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFilm" />
+  </wsdl:message>
+  <wsdl:message name="IFilm_DeleteFilm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFilmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFilm_Message_InputMessage">
+    <wsdl:part name="parameters" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:message name="IFilm_Message_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MessageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFilm">
+    <wsdl:operation name="GetFilms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFilm/GetFilms" message="tns:IFilm_GetFilms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFilm/GetFilmsResponse" message="tns:IFilm_GetFilms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilmByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFilm/GetFilmByID" message="tns:IFilm_GetFilmByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFilm/GetFilmByIDResponse" message="tns:IFilm_GetFilmByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostFilm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFilm/PostFilm" message="tns:IFilm_PostFilm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFilm/PostFilmResponse" message="tns:IFilm_PostFilm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutFilm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFilm/PutFilm" message="tns:IFilm_PutFilm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFilm/PutFilmResponse" message="tns:IFilm_PutFilm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFilm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFilm/DeleteFilm" message="tns:IFilm_DeleteFilm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFilm/DeleteFilmResponse" message="tns:IFilm_DeleteFilm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Message">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFilm/Message" message="tns:IFilm_Message_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFilm/MessageResponse" message="tns:IFilm_Message_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFilm" type="tns:IFilm">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFilms">
+      <soap:operation soapAction="http://tempuri.org/IFilm/GetFilms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilmByID">
+      <soap:operation soapAction="http://tempuri.org/IFilm/GetFilmByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostFilm">
+      <soap:operation soapAction="http://tempuri.org/IFilm/PostFilm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutFilm">
+      <soap:operation soapAction="http://tempuri.org/IFilm/PutFilm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFilm">
+      <soap:operation soapAction="http://tempuri.org/IFilm/DeleteFilm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Message">
+      <soap:operation soapAction="http://tempuri.org/IFilm/Message" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Film">
+    <wsdl:port name="BasicHttpBinding_IFilm" binding="tns:BasicHttpBinding_IFilm">
+      <soap:address location="http://localhost:52423/Film.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
